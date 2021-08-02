@@ -5,17 +5,22 @@
  */
 package view;
 
+import controller.ControllerInformacoes;
+
 /**
  *
  * @author Casa
  */
 public class Informacoes extends javax.swing.JFrame {
 
+    private final ControllerInformacoes controller;
+    
     /**
      * Creates new form MenuPrincipal
      */
     public Informacoes() {
         initComponents();
+        this.controller = new ControllerInformacoes(this);
     }
 
     /**
@@ -58,6 +63,11 @@ public class Informacoes extends javax.swing.JFrame {
         btnVoltar.setBackground(new java.awt.Color(255, 255, 255));
         btnVoltar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         lblTitulo1.setFont(new java.awt.Font("Monotype Corsiva", 1, 48)); // NOI18N
@@ -161,6 +171,12 @@ public class Informacoes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        
+        controller.voltarParaCardapioPedido();
+        
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments

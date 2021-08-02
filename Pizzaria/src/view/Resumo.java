@@ -5,17 +5,22 @@
  */
 package view;
 
+import controller.ControllerResumo;
+
 /**
  *
  * @author Casa
  */
 public class Resumo extends javax.swing.JFrame {
 
+    private final ControllerResumo controller;
+    
     /**
      * Creates new form MenuPrincipal
      */
     public Resumo() {
         initComponents();
+        this.controller = new ControllerResumo(this);
     }
 
     /**
@@ -44,6 +49,11 @@ public class Resumo extends javax.swing.JFrame {
         btnVoltar.setBackground(new java.awt.Color(255, 255, 255));
         btnVoltar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         lblTitulo.setFont(new java.awt.Font("Monotype Corsiva", 1, 48)); // NOI18N
@@ -89,6 +99,12 @@ public class Resumo extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        
+        controller.voltarParaInformacoes();
+        
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
