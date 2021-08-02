@@ -5,17 +5,22 @@
  */
 package view;
 
+import controller.ControllerCardapio;
+
 /**
  *
  * @author Casa
  */
 public class Cardapio extends javax.swing.JFrame {
+    
+    private final ControllerCardapio controller;
 
     /**
      * Creates new form MenuPrincipal
      */
     public Cardapio() {
         initComponents();
+        this.controller = new ControllerCardapio(this);
     }
 
     /**
@@ -55,6 +60,11 @@ public class Cardapio extends javax.swing.JFrame {
         btnVoltar.setBackground(new java.awt.Color(255, 255, 255));
         btnVoltar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         lblTitulo.setFont(new java.awt.Font("Monotype Corsiva", 1, 48)); // NOI18N
@@ -157,6 +167,12 @@ public class Cardapio extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        
+        this.controller.voltarParaMenu();
+        
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
