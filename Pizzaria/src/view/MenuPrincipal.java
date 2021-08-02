@@ -5,17 +5,21 @@
  */
 package view;
 
+import controller.ControllerMenuPrincipal;
+
 /**
  *
  * @author Casa
  */
 public class MenuPrincipal extends javax.swing.JFrame {
 
+    private final ControllerMenuPrincipal controller;
     /**
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal() {
         initComponents();
+        this.controller = new ControllerMenuPrincipal(this);
     }
 
     /**
@@ -34,7 +38,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnSair = new javax.swing.JButton();
         lblFundo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblTitulo.setFont(new java.awt.Font("Monotype Corsiva", 1, 48)); // NOI18N
@@ -51,6 +55,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnFazerPedido.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         btnFazerPedido.setText("Fazer pedido");
         btnFazerPedido.setPreferredSize(new java.awt.Dimension(173, 45));
+        btnFazerPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFazerPedidoActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnFazerPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 270, 330, -1));
 
         btnCardapio.setBackground(new java.awt.Color(255, 255, 255));
@@ -59,6 +68,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnCardapio.setMaximumSize(new java.awt.Dimension(173, 37));
         btnCardapio.setMinimumSize(new java.awt.Dimension(173, 37));
         btnCardapio.setPreferredSize(new java.awt.Dimension(173, 45));
+        btnCardapio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCardapioActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnCardapio, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 350, 330, -1));
 
         btnSair.setBackground(new java.awt.Color(255, 255, 255));
@@ -67,6 +81,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btnSair.setMaximumSize(new java.awt.Dimension(173, 37));
         btnSair.setMinimumSize(new java.awt.Dimension(173, 37));
         btnSair.setPreferredSize(new java.awt.Dimension(173, 45));
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 430, 330, -1));
 
         lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/menuPrincipal.png"))); // NOI18N
@@ -74,6 +93,24 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCardapioActionPerformed
+        
+        controller.navegarParaCardapio();
+        
+    }//GEN-LAST:event_btnCardapioActionPerformed
+
+    private void btnFazerPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFazerPedidoActionPerformed
+        
+        controller.navegarParaCardapioPedido();
+        
+    }//GEN-LAST:event_btnFazerPedidoActionPerformed
+
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        
+        System.exit(0);
+        
+    }//GEN-LAST:event_btnSairActionPerformed
 
     /**
      * @param args the command line arguments
