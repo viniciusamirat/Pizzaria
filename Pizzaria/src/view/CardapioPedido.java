@@ -196,6 +196,11 @@ public class CardapioPedido extends javax.swing.JFrame {
         btnAvancar.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         btnAvancar.setText("Avançar");
         btnAvancar.setPreferredSize(new java.awt.Dimension(118, 41));
+        btnAvancar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAvancarActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnAvancar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 510, -1, -1));
 
         lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/cardapio.png"))); // NOI18N
@@ -209,6 +214,12 @@ public class CardapioPedido extends javax.swing.JFrame {
         controller.VoltarParaMenu();
         
     }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void btnAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAvancarActionPerformed
+        
+        controller.navegarParaInformacoes();
+        
+    }//GEN-LAST:event_btnAvancarActionPerformed
 
     /**
      * @param args the command line arguments

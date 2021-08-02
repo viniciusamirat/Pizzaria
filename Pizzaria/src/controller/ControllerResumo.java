@@ -5,6 +5,7 @@
  */
 package controller;
 
+import view.Agradecimento;
 import view.Informacoes;
 import view.Resumo;
 
@@ -21,10 +22,19 @@ public class ControllerResumo {
     }
 
     public void voltarParaInformacoes() {
-        this.resumo.setVisible(false);
         
         Informacoes informacoes = new Informacoes();
         informacoes.setVisible(true);
+        
+        this.resumo.setVisible(false);
+    }
+
+    public void confirmarPedido() {
+        
+        Agradecimento agradecimento = new Agradecimento();
+        agradecimento.setVisible(true);
+        
+        this.resumo.setVisible(false);
     }
     
     

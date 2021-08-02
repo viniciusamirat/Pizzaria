@@ -6,6 +6,7 @@
 package controller;
 
 import view.CardapioPedido;
+import view.Informacoes;
 
 /**
  *
@@ -21,6 +22,13 @@ public class ControllerCardapioPedido {
 
     public void VoltarParaMenu() {
         this.cardapioPedido.setVisible(false);
+    }
+
+    public void navegarParaInformacoes() {
+        Informacoes informacoes = new Informacoes();
+        informacoes.setVisible(true);
+        
+        cardapioPedido.setVisible(false);
     }
     
     

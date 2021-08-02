@@ -5,17 +5,22 @@
  */
 package view;
 
+import controller.ControllerAgradecimento;
+
 /**
  *
  * @author Casa
  */
 public class Agradecimento extends javax.swing.JFrame {
 
+    private final ControllerAgradecimento controller;
+    
     /**
      * Creates new form MenuPrincipal
      */
     public Agradecimento() {
         initComponents();
+        this.controller = new ControllerAgradecimento(this);
     }
 
     /**
@@ -67,6 +72,11 @@ public class Agradecimento extends javax.swing.JFrame {
         jButton3.setMaximumSize(new java.awt.Dimension(173, 37));
         jButton3.setMinimumSize(new java.awt.Dimension(173, 37));
         jButton3.setPreferredSize(new java.awt.Dimension(173, 45));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 510, 320, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 255, 255));
@@ -75,6 +85,11 @@ public class Agradecimento extends javax.swing.JFrame {
         jButton2.setMaximumSize(new java.awt.Dimension(173, 37));
         jButton2.setMinimumSize(new java.awt.Dimension(173, 37));
         jButton2.setPreferredSize(new java.awt.Dimension(173, 45));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 440, 320, -1));
 
         lblFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view/images/menuPrincipal.png"))); // NOI18N
@@ -82,6 +97,18 @@ public class Agradecimento extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        
+        controller.navegarParaMenu();
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        
+        System.exit(0);
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

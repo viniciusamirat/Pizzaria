@@ -7,6 +7,7 @@ package controller;
 
 import view.CardapioPedido;
 import view.Informacoes;
+import view.Resumo;
 
 /**
  *
@@ -21,10 +22,19 @@ public class ControllerInformacoes {
     }
 
     public void voltarParaCardapioPedido() {
-        this.informacoes.setVisible(false);
         
         CardapioPedido cardapioPedido = new CardapioPedido();
         cardapioPedido.setVisible(true);
+        
+        this.informacoes.setVisible(false);
+    }
+
+    public void navegarParaResumo() {
+        
+        Resumo resumo = new Resumo();
+        resumo.setVisible(true);
+        
+        this.informacoes.setVisible(false);
     }
     
 }
