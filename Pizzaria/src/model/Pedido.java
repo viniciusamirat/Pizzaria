@@ -11,7 +11,7 @@ package model;
  */
 public class Pedido {
     private Cliente cliente;
-    private Pizza pizza;
+    private String[] pizza;
     private Pagamento pagamento;
     private float preco;
     private float troco;
@@ -20,40 +20,32 @@ public class Pedido {
         if (pagamento.isPrecisaDeTroco()){
             float trocoCalculado = pagamento.getTrocoPraQuanto() - this.preco;
             setTroco(trocoCalculado);
-        }
+}
     }
-    
-    public float calcularPre
 
-    public Pedido(Cliente cliente, Pizza pizza, Pagamento formaDePagamento) {
-        this.cliente = cliente;
+    public String[] getPizza() {
+        return pizza;
+    }
+
+    public void setPizza(String[] pizza) {
         this.pizza = pizza;
-        this.pagamento = formaDePagamento;
-        
     }
 
+    public Pagamento getPagamento() {
+        return pagamento;
+    }
+
+    public void setPagamento(Pagamento pagamento) {
+        this.pagamento = pagamento;
+    }
+
+    
     public Cliente getCliente() {
         return cliente;
     }
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
-    }
-
-    public Pizza getPizza() {
-        return pizza;
-    }
-
-    public void setPizza(Pizza pizza) {
-        this.pizza = pizza;
-    }
-
-    public Pagamento getFormaDePagamento() {
-        return formaDePagamento;
-    }
-
-    public void setFormaDePagamento(Pagamento formaDePagamento) {
-        this.formaDePagamento = formaDePagamento;
     }
 
     public float getPreco() {

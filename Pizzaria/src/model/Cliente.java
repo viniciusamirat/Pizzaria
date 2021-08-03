@@ -15,14 +15,6 @@ public class Cliente {
     private String bairro;
     private String rua;
     private String numeroResidencia;
-
-    public Cliente(String nome, String telefone, String bairro, String rua, String numeroResidencia) {
-        this.nome = nome;
-        this.telefone = telefone;
-        this.bairro = bairro;
-        this.rua = rua;
-        this.numeroResidencia = numeroResidencia;
-    }
     
     public String getNome() {
         return nome;

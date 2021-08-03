@@ -16,21 +16,6 @@ public class Pagamento {
     private boolean precisaDeTroco;
     private float trocoPraQuanto;
 
-    public Pagamento(FormaDePagamento formaDePagamento, boolean precisaDeTroco, float trocoPraQuanto) {
-        this.formaDePagamento = formaDePagamento;
-        this.precisaDeTroco = precisaDeTroco;
-        this.trocoPraQuanto = trocoPraQuanto;
-    }
-
-    public Pagamento(FormaDePagamento formaDePagamento, boolean precisaDeTroco) {
-        this.formaDePagamento = formaDePagamento;
-        this.precisaDeTroco = precisaDeTroco;
-    }
-
-    public Pagamento(FormaDePagamento formaDePagamento) {
-        this.formaDePagamento = formaDePagamento;
-    }
-
     public FormaDePagamento getFormaDePagamento() {
         return formaDePagamento;
     }

@@ -5,6 +5,8 @@
  */
 package controller;
 
+import controller.helper.HelperCardapioPedido;
+import javax.swing.JCheckBox;
 import view.CardapioPedido;
 import view.Informacoes;
 
@@ -15,9 +17,11 @@ import view.Informacoes;
 public class ControllerCardapioPedido {
     
     private final CardapioPedido cardapioPedido;
+    private final HelperCardapioPedido helper;
 
     public ControllerCardapioPedido(CardapioPedido cardapioPedido) {
         this.cardapioPedido = cardapioPedido;
+        this.helper = new HelperCardapioPedido(cardapioPedido);
     }
 
     public void VoltarParaMenu() {
@@ -29,6 +33,15 @@ public class ControllerCardapioPedido {
         informacoes.setVisible(true);
         
         cardapioPedido.setVisible(false);
+    }
+
+    public void clicarNaPizza(JCheckBox checkBoxPizza, double preco) {
+        
+        if (checkBoxPizza.isSelected()){
+            helper.somarCampoTotal(preco);
+        } else {
+            helper.subtrairCampoTotal(preco);
+        }
     }
     
     

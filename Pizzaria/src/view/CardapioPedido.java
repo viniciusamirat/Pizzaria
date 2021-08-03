@@ -6,6 +6,8 @@
 package view;
 
 import controller.ControllerCardapioPedido;
+import javax.swing.JCheckBox;
+import javax.swing.JTextField;
 
 /**
  *
@@ -180,6 +182,11 @@ public class CardapioPedido extends javax.swing.JFrame {
         checkBoxPizza1.setForeground(new java.awt.Color(255, 255, 255));
         checkBoxPizza1.setText("À Moda da Casa");
         checkBoxPizza1.setPreferredSize(new java.awt.Dimension(213, 41));
+        checkBoxPizza1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBoxPizza1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(checkBoxPizza1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 250, -1));
 
         lblTotal.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
@@ -220,6 +227,12 @@ public class CardapioPedido extends javax.swing.JFrame {
         controller.navegarParaInformacoes();
         
     }//GEN-LAST:event_btnAvancarActionPerformed
+
+    private void checkBoxPizza1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza1ActionPerformed
+        
+        controller.clicarNaPizza(this.checkBoxPizza1, 44.00);
+        
+    }//GEN-LAST:event_checkBoxPizza1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -262,6 +275,87 @@ public class CardapioPedido extends javax.swing.JFrame {
             }
         });
     }
+
+    public JCheckBox getCheckBoxPizza1() {
+        return checkBoxPizza1;
+    }
+
+    public void setCheckBoxPizza1(JCheckBox checkBoxPizza1) {
+        this.checkBoxPizza1 = checkBoxPizza1;
+    }
+
+    public JCheckBox getCheckBoxPizza2() {
+        return checkBoxPizza2;
+    }
+
+    public void setCheckBoxPizza2(JCheckBox checkBoxPizza2) {
+        this.checkBoxPizza2 = checkBoxPizza2;
+    }
+
+    public JCheckBox getCheckBoxPizza3() {
+        return checkBoxPizza3;
+    }
+
+    public void setCheckBoxPizza3(JCheckBox checkBoxPizza3) {
+        this.checkBoxPizza3 = checkBoxPizza3;
+    }
+
+    public JCheckBox getCheckBoxPizza4() {
+        return checkBoxPizza4;
+    }
+
+    public void setCheckBoxPizza4(JCheckBox checkBoxPizza4) {
+        this.checkBoxPizza4 = checkBoxPizza4;
+    }
+
+    public JCheckBox getCheckBoxPizza5() {
+        return checkBoxPizza5;
+    }
+
+    public void setCheckBoxPizza5(JCheckBox checkBoxPizza5) {
+        this.checkBoxPizza5 = checkBoxPizza5;
+    }
+
+    public JCheckBox getCheckBoxPizza6() {
+        return checkBoxPizza6;
+    }
+
+    public void setCheckBoxPizza6(JCheckBox checkBoxPizza6) {
+        this.checkBoxPizza6 = checkBoxPizza6;
+    }
+
+    public JCheckBox getCheckBoxPizza7() {
+        return checkBoxPizza7;
+    }
+
+    public void setCheckBoxPizza7(JCheckBox checkBoxPizza7) {
+        this.checkBoxPizza7 = checkBoxPizza7;
+    }
+
+    public JCheckBox getCheckBoxPizza8() {
+        return checkBoxPizza8;
+    }
+
+    public void setCheckBoxPizza8(JCheckBox checkBoxPizza8) {
+        this.checkBoxPizza8 = checkBoxPizza8;
+    }
+
+    public JCheckBox getCheckBoxPizza9() {
+        return checkBoxPizza9;
+    }
+
+    public void setCheckBoxPizza9(JCheckBox checkBoxPizza9) {
+        this.checkBoxPizza9 = checkBoxPizza9;
+    }
+
+    public JTextField getTxtTotal() {
+        return txtTotal;
+    }
+
+    public void setTxtTotal(JTextField txtTotal) {
+        this.txtTotal = txtTotal;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAvancar;
