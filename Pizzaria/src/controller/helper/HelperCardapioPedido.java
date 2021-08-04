@@ -33,7 +33,11 @@ public class HelperCardapioPedido {
     }
 
     public void subtrairCampoTotal(double preco) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        double precoDoCampo = Double.parseDouble(view.getTxtTotal().getText());
+        
+        double precoSubtraido = precoDoCampo - preco;
+        
+        view.getTxtTotal().setText(precoSubtraido + "");
     }
     
     

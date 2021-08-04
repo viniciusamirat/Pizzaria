@@ -86,6 +86,11 @@ public class CardapioPedido extends javax.swing.JFrame {
         checkBoxPizza2.setForeground(new java.awt.Color(255, 255, 255));
         checkBoxPizza2.setText("Aliche");
         checkBoxPizza2.setPreferredSize(new java.awt.Dimension(213, 41));
+        checkBoxPizza2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBoxPizza2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(checkBoxPizza2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 250, -1));
 
         lblPreco2.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
@@ -98,6 +103,11 @@ public class CardapioPedido extends javax.swing.JFrame {
         checkBoxPizza3.setForeground(new java.awt.Color(255, 255, 255));
         checkBoxPizza3.setText("Baurú");
         checkBoxPizza3.setPreferredSize(new java.awt.Dimension(213, 41));
+        checkBoxPizza3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBoxPizza3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(checkBoxPizza3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 250, -1));
 
         lblPreco3.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
@@ -110,6 +120,11 @@ public class CardapioPedido extends javax.swing.JFrame {
         checkBoxPizza4.setForeground(new java.awt.Color(255, 255, 255));
         checkBoxPizza4.setText("Baiana");
         checkBoxPizza4.setPreferredSize(new java.awt.Dimension(213, 41));
+        checkBoxPizza4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBoxPizza4ActionPerformed(evt);
+            }
+        });
         getContentPane().add(checkBoxPizza4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, 250, -1));
 
         lblPreco4.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
@@ -122,6 +137,11 @@ public class CardapioPedido extends javax.swing.JFrame {
         checkBoxPizza5.setForeground(new java.awt.Color(255, 255, 255));
         checkBoxPizza5.setText("Brasileira");
         checkBoxPizza5.setPreferredSize(new java.awt.Dimension(213, 41));
+        checkBoxPizza5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBoxPizza5ActionPerformed(evt);
+            }
+        });
         getContentPane().add(checkBoxPizza5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 480, 250, -1));
 
         lblPreco5.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
@@ -134,6 +154,11 @@ public class CardapioPedido extends javax.swing.JFrame {
         checkBoxPizza6.setForeground(new java.awt.Color(255, 255, 255));
         checkBoxPizza6.setText("Paraguaia");
         checkBoxPizza6.setPreferredSize(new java.awt.Dimension(213, 41));
+        checkBoxPizza6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBoxPizza6ActionPerformed(evt);
+            }
+        });
         getContentPane().add(checkBoxPizza6, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 160, 310, -1));
 
         lblPreco6.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
@@ -146,6 +171,11 @@ public class CardapioPedido extends javax.swing.JFrame {
         checkBoxPizza7.setForeground(new java.awt.Color(255, 255, 255));
         checkBoxPizza7.setText("Portuguesa");
         checkBoxPizza7.setPreferredSize(new java.awt.Dimension(213, 41));
+        checkBoxPizza7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBoxPizza7ActionPerformed(evt);
+            }
+        });
         getContentPane().add(checkBoxPizza7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 240, 310, -1));
 
         lblPreco7.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
@@ -158,6 +188,11 @@ public class CardapioPedido extends javax.swing.JFrame {
         checkBoxPizza8.setForeground(new java.awt.Color(255, 255, 255));
         checkBoxPizza8.setText("Vegetariana");
         checkBoxPizza8.setPreferredSize(new java.awt.Dimension(213, 41));
+        checkBoxPizza8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBoxPizza8ActionPerformed(evt);
+            }
+        });
         getContentPane().add(checkBoxPizza8, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 320, 310, -1));
 
         lblPreco8.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
@@ -170,6 +205,11 @@ public class CardapioPedido extends javax.swing.JFrame {
         checkBoxPizza9.setForeground(new java.awt.Color(255, 255, 255));
         checkBoxPizza9.setText("Frango com Catupiry");
         checkBoxPizza9.setPreferredSize(new java.awt.Dimension(213, 41));
+        checkBoxPizza9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkBoxPizza9ActionPerformed(evt);
+            }
+        });
         getContentPane().add(checkBoxPizza9, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 400, 310, -1));
 
         lblPreco9.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
@@ -194,6 +234,7 @@ public class CardapioPedido extends javax.swing.JFrame {
         lblTotal.setText("Total:");
         getContentPane().add(lblTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 510, 80, -1));
 
+        txtTotal.setEditable(false);
         txtTotal.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         txtTotal.setForeground(new java.awt.Color(0, 153, 0));
         txtTotal.setPreferredSize(new java.awt.Dimension(118, 41));
@@ -233,6 +274,54 @@ public class CardapioPedido extends javax.swing.JFrame {
         controller.clicarNaPizza(this.checkBoxPizza1, 44.00);
         
     }//GEN-LAST:event_checkBoxPizza1ActionPerformed
+
+    private void checkBoxPizza2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza2ActionPerformed
+        
+        controller.clicarNaPizza(this.checkBoxPizza2, 35.00);
+        
+    }//GEN-LAST:event_checkBoxPizza2ActionPerformed
+
+    private void checkBoxPizza3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza3ActionPerformed
+        
+        controller.clicarNaPizza(this.checkBoxPizza3, 34.00);
+        
+    }//GEN-LAST:event_checkBoxPizza3ActionPerformed
+
+    private void checkBoxPizza4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza4ActionPerformed
+        
+        controller.clicarNaPizza(this.checkBoxPizza4, 37.00);
+        
+    }//GEN-LAST:event_checkBoxPizza4ActionPerformed
+
+    private void checkBoxPizza5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza5ActionPerformed
+        
+        controller.clicarNaPizza(this.checkBoxPizza5, 40.00);
+        
+    }//GEN-LAST:event_checkBoxPizza5ActionPerformed
+
+    private void checkBoxPizza6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza6ActionPerformed
+        
+        controller.clicarNaPizza(this.checkBoxPizza6, 42.00);
+        
+    }//GEN-LAST:event_checkBoxPizza6ActionPerformed
+
+    private void checkBoxPizza7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza7ActionPerformed
+        
+        controller.clicarNaPizza(this.checkBoxPizza7, 39.00);
+        
+    }//GEN-LAST:event_checkBoxPizza7ActionPerformed
+
+    private void checkBoxPizza8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza8ActionPerformed
+        
+        controller.clicarNaPizza(this.checkBoxPizza8, 40.00);
+        
+    }//GEN-LAST:event_checkBoxPizza8ActionPerformed
+
+    private void checkBoxPizza9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza9ActionPerformed
+        
+        controller.clicarNaPizza(this.checkBoxPizza9, 38.00);
+        
+    }//GEN-LAST:event_checkBoxPizza9ActionPerformed
 
     /**
      * @param args the command line arguments
