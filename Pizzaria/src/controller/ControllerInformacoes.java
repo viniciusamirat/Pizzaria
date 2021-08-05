@@ -5,6 +5,7 @@
  */
 package controller;
 
+import controller.helper.HelperInformacoes;
 import view.CardapioPedido;
 import view.Informacoes;
 import view.Resumo;
@@ -16,9 +17,12 @@ import view.Resumo;
 public class ControllerInformacoes {
     
     private final Informacoes informacoes;
+    private final HelperInformacoes helper;
 
     public ControllerInformacoes(Informacoes informacoes) {
         this.informacoes = informacoes;
+        this.helper = new HelperInformacoes(informacoes);
+        
     }
 
     public void voltarParaCardapioPedido() {
@@ -36,5 +40,29 @@ public class ControllerInformacoes {
         
         this.informacoes.setVisible(false);
     }
-    
+
+    public void esconderCamposTroco() {
+        
+        helper.esconderPrecisaDeTroco();
+        helper.esconderTrocoParaQuanto();
+    }
+
+    public void pagarComDinheiro() {
+        
+        if (informacoes.getRadioDinheiro().isSelected()){
+            helper.mostrarPrecisaDeTroco();
+        } else {
+            helper.esconderPrecisaDeTroco();
+            helper.esconderTrocoParaQuanto();
+        }
+    }
+
+    public void precisaDeTroco() {
+        
+        if (informacoes.getRadioSim().isSelected()){
+            helper.mostrarTrocoParaQuanto();
+        } else {
+            helper.esconderTrocoParaQuanto();
+        }
+    }
 }

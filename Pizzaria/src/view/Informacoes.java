@@ -6,6 +6,9 @@
 package view;
 
 import controller.ControllerInformacoes;
+import javax.swing.JLabel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 
 /**
  *
@@ -21,6 +24,8 @@ public class Informacoes extends javax.swing.JFrame {
     public Informacoes() {
         initComponents();
         this.controller = new ControllerInformacoes(this);
+        
+        controller.esconderCamposTroco();
     }
 
     /**
@@ -133,6 +138,11 @@ public class Informacoes extends javax.swing.JFrame {
         radioDinheiro.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         radioDinheiro.setForeground(new java.awt.Color(255, 255, 255));
         radioDinheiro.setText("Dinheiro");
+        radioDinheiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioDinheiroActionPerformed(evt);
+            }
+        });
         getContentPane().add(radioDinheiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 300, -1, -1));
 
         lblTroco.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
@@ -145,6 +155,11 @@ public class Informacoes extends javax.swing.JFrame {
         radioSim.setForeground(new java.awt.Color(255, 255, 255));
         radioSim.setText("Sim");
         radioSim.setPreferredSize(new java.awt.Dimension(93, 31));
+        radioSim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioSimActionPerformed(evt);
+            }
+        });
         getContentPane().add(radioSim, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 390, -1, -1));
 
         radioNao.setBackground(new java.awt.Color(255, 255, 255));
@@ -189,6 +204,18 @@ public class Informacoes extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnAvancarActionPerformed
 
+    private void radioDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioDinheiroActionPerformed
+        
+        controller.pagarComDinheiro();
+        
+    }//GEN-LAST:event_radioDinheiroActionPerformed
+
+    private void radioSimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioSimActionPerformed
+        
+        controller.precisaDeTroco();
+        
+    }//GEN-LAST:event_radioSimActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -231,6 +258,111 @@ public class Informacoes extends javax.swing.JFrame {
         });
     }
 
+    public JLabel getLblTroco() {
+        return lblTroco;
+    }
+
+    public void setLblTroco(JLabel lblTroco) {
+        this.lblTroco = lblTroco;
+    }
+
+    public JLabel getLblTrocoQuanto() {
+        return lblTrocoQuanto;
+    }
+
+    public void setLblTrocoQuanto(JLabel lblTrocoQuanto) {
+        this.lblTrocoQuanto = lblTrocoQuanto;
+    }
+
+    public JRadioButton getRadioCredito() {
+        return radioCredito;
+    }
+
+    public void setRadioCredito(JRadioButton radioCredito) {
+        this.radioCredito = radioCredito;
+    }
+
+    public JRadioButton getRadioDebito() {
+        return radioDebito;
+    }
+
+    public void setRadioDebito(JRadioButton radioDebito) {
+        this.radioDebito = radioDebito;
+    }
+
+    public JRadioButton getRadioDinheiro() {
+        return radioDinheiro;
+    }
+
+    public void setRadioDinheiro(JRadioButton radioDinheiro) {
+        this.radioDinheiro = radioDinheiro;
+    }
+
+    public JRadioButton getRadioNao() {
+        return radioNao;
+    }
+
+    public void setRadioNao(JRadioButton radioNao) {
+        this.radioNao = radioNao;
+    }
+
+    public JRadioButton getRadioSim() {
+        return radioSim;
+    }
+
+    public void setRadioSim(JRadioButton radioSim) {
+        this.radioSim = radioSim;
+    }
+
+    public JTextField getTxtBairro() {
+        return txtBairro;
+    }
+
+    public void setTxtBairro(JTextField txtBairro) {
+        this.txtBairro = txtBairro;
+    }
+
+    public JTextField getTxtNome() {
+        return txtNome;
+    }
+
+    public void setTxtNome(JTextField txtNome) {
+        this.txtNome = txtNome;
+    }
+
+    public JTextField getTxtNumero() {
+        return txtNumero;
+    }
+
+    public void setTxtNumero(JTextField txtNumero) {
+        this.txtNumero = txtNumero;
+    }
+
+    public JTextField getTxtRua() {
+        return txtRua;
+    }
+
+    public void setTxtRua(JTextField txtRua) {
+        this.txtRua = txtRua;
+    }
+
+    public JTextField getTxtTelefone() {
+        return txtTelefone;
+    }
+
+    public void setTxtTelefone(JTextField txtTelefone) {
+        this.txtTelefone = txtTelefone;
+    }
+
+    public JTextField getTxtTroco() {
+        return txtTroco;
+    }
+
+    public void setTxtTroco(JTextField txtTroco) {
+        this.txtTroco = txtTroco;
+    }
+
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAvancar;
     private javax.swing.JButton btnVoltar;
