@@ -116,10 +116,20 @@ public class Informacoes extends javax.swing.JFrame {
         lblTelefone.setForeground(new java.awt.Color(255, 255, 255));
         lblTelefone.setText("Telefone");
         getContentPane().add(lblTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 90, -1));
+
+        txtNome.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 200, 30));
+
+        txtBairro.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(txtBairro, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 200, 30));
+
+        txtNumero.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(txtNumero, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 320, 40, 30));
+
+        txtRua.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(txtRua, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, 200, 30));
+
+        txtTelefone.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         getContentPane().add(txtTelefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, 200, 30));
 
         lblPagamento.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
@@ -200,6 +210,9 @@ public class Informacoes extends javax.swing.JFrame {
         lblTrocoQuanto.setForeground(new java.awt.Color(255, 255, 255));
         lblTrocoQuanto.setText("Troco para quanto?");
         getContentPane().add(lblTrocoQuanto, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 190, 200, -1));
+
+        txtTroco.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtTroco.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         getContentPane().add(txtTroco, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 220, 200, 30));
 
         btnAvancar.setBackground(new java.awt.Color(255, 255, 255));
