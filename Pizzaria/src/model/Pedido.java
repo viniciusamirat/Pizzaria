@@ -11,10 +11,11 @@ package model;
  */
 public class Pedido {
     private Cliente cliente;
-    private String[] pizza;
+    private String[] pizzas = new String[9];
     private Pagamento pagamento;
     private float preco;
     private float troco;
+    private int tempoEmMinutos;
     
     public void calcularTroco(){
         if (pagamento.isPrecisaDeTroco()){
@@ -23,12 +24,20 @@ public class Pedido {
 }
     }
 
-    public String[] getPizza() {
-        return pizza;
+    public int getTempoEmMinutos() {
+        return tempoEmMinutos;
     }
 
-    public void setPizza(String[] pizza) {
-        this.pizza = pizza;
+    public void setTempoEmMinutos(int tempoEmMinutos) {
+        this.tempoEmMinutos = tempoEmMinutos;
+    }
+
+    public String[] getPizzas() {
+        return pizzas;
+    }
+
+    public void setPizzas(String[] pizza) {
+        this.pizzas = pizza;
     }
 
     public Pagamento getPagamento() {

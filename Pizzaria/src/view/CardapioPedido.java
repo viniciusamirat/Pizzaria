@@ -8,6 +8,7 @@ package view;
 import controller.ControllerCardapioPedido;
 import javax.swing.JCheckBox;
 import javax.swing.JTextField;
+import model.Pedido;
 
 /**
  *
@@ -22,6 +23,7 @@ public class CardapioPedido extends javax.swing.JFrame {
     public CardapioPedido() {
         initComponents();
         this.controller = new ControllerCardapioPedido(this);
+        
     }
 
     /**
@@ -271,55 +273,55 @@ public class CardapioPedido extends javax.swing.JFrame {
 
     private void checkBoxPizza1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza1ActionPerformed
         
-        controller.clicarNaPizza(this.checkBoxPizza1, 44.00);
+        controller.clicarNaPizza(this.checkBoxPizza1, 44.00, 1);
         
     }//GEN-LAST:event_checkBoxPizza1ActionPerformed
 
     private void checkBoxPizza2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza2ActionPerformed
         
-        controller.clicarNaPizza(this.checkBoxPizza2, 35.00);
+        controller.clicarNaPizza(this.checkBoxPizza2, 35.00, 2);
         
     }//GEN-LAST:event_checkBoxPizza2ActionPerformed
 
     private void checkBoxPizza3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza3ActionPerformed
         
-        controller.clicarNaPizza(this.checkBoxPizza3, 34.00);
+        controller.clicarNaPizza(this.checkBoxPizza3, 34.00, 3);
         
     }//GEN-LAST:event_checkBoxPizza3ActionPerformed
 
     private void checkBoxPizza4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza4ActionPerformed
         
-        controller.clicarNaPizza(this.checkBoxPizza4, 37.00);
+        controller.clicarNaPizza(this.checkBoxPizza4, 37.00, 4);
         
     }//GEN-LAST:event_checkBoxPizza4ActionPerformed
 
     private void checkBoxPizza5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza5ActionPerformed
         
-        controller.clicarNaPizza(this.checkBoxPizza5, 40.00);
+        controller.clicarNaPizza(this.checkBoxPizza5, 40.00, 5);
         
     }//GEN-LAST:event_checkBoxPizza5ActionPerformed
 
     private void checkBoxPizza6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza6ActionPerformed
         
-        controller.clicarNaPizza(this.checkBoxPizza6, 42.00);
+        controller.clicarNaPizza(this.checkBoxPizza6, 42.00, 6);
         
     }//GEN-LAST:event_checkBoxPizza6ActionPerformed
 
     private void checkBoxPizza7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza7ActionPerformed
         
-        controller.clicarNaPizza(this.checkBoxPizza7, 39.00);
+        controller.clicarNaPizza(this.checkBoxPizza7, 39.00, 7);
         
     }//GEN-LAST:event_checkBoxPizza7ActionPerformed
 
     private void checkBoxPizza8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza8ActionPerformed
         
-        controller.clicarNaPizza(this.checkBoxPizza8, 40.00);
+        controller.clicarNaPizza(this.checkBoxPizza8, 40.00, 8);
         
     }//GEN-LAST:event_checkBoxPizza8ActionPerformed
 
     private void checkBoxPizza9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkBoxPizza9ActionPerformed
         
-        controller.clicarNaPizza(this.checkBoxPizza9, 38.00);
+        controller.clicarNaPizza(this.checkBoxPizza9, 38.00, 9);
         
     }//GEN-LAST:event_checkBoxPizza9ActionPerformed
 
@@ -472,4 +474,11 @@ public class CardapioPedido extends javax.swing.JFrame {
     private javax.swing.JLabel lblTotal;
     private javax.swing.JTextField txtTotal;
     // End of variables declaration//GEN-END:variables
+
+    public void setarPedido(Pedido pedido) {
+        
+        controller.setPedido(pedido);
+        
+        controller.existePizzasSelecionadas();
+    }
 }

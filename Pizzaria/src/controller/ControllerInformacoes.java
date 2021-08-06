@@ -6,6 +6,7 @@
 package controller;
 
 import controller.helper.HelperInformacoes;
+import model.Pedido;
 import view.CardapioPedido;
 import view.Informacoes;
 import view.Resumo;
@@ -18,6 +19,7 @@ public class ControllerInformacoes {
     
     private final Informacoes informacoes;
     private final HelperInformacoes helper;
+    private Pedido pedido = new Pedido();
 
     public ControllerInformacoes(Informacoes informacoes) {
         this.informacoes = informacoes;
@@ -28,6 +30,7 @@ public class ControllerInformacoes {
     public void voltarParaCardapioPedido() {
         
         CardapioPedido cardapioPedido = new CardapioPedido();
+        cardapioPedido.setarPedido(this.pedido);
         cardapioPedido.setVisible(true);
         
         this.informacoes.setVisible(false);
@@ -65,4 +68,14 @@ public class ControllerInformacoes {
             helper.esconderTrocoParaQuanto();
         }
     }
+
+    public Pedido getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
+    }
+    
+    
 }

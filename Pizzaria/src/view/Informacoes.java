@@ -9,6 +9,7 @@ import controller.ControllerInformacoes;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import model.Pedido;
 
 /**
  *
@@ -26,6 +27,10 @@ public class Informacoes extends javax.swing.JFrame {
         this.controller = new ControllerInformacoes(this);
         
         controller.esconderCamposTroco();
+    }
+    
+    public void setarPedido(Pedido pedido){
+        controller.setPedido(pedido);
     }
 
     /**

@@ -5,6 +5,7 @@
  */
 package controller;
 
+import controller.helper.HelperResumo;
 import view.Agradecimento;
 import view.Informacoes;
 import view.Resumo;
@@ -16,9 +17,11 @@ import view.Resumo;
 public class ControllerResumo {
     
     private final Resumo resumo;
+    private final HelperResumo helper;
 
     public ControllerResumo(Resumo resumo) {
         this.resumo = resumo;
+        this.helper = new HelperResumo(resumo);
     }
 
     public void voltarParaInformacoes() {
