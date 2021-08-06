@@ -18,10 +18,9 @@ public class Pedido {
     private int tempoEmMinutos;
     
     public void calcularTroco(){
-        if (pagamento.isPrecisaDeTroco()){
-            float trocoCalculado = pagamento.getTrocoPraQuanto() - this.preco;
-            setTroco(trocoCalculado);
-}
+        
+        float trocoCalculado = pagamento.getTrocoPraQuanto() - this.preco;
+        setTroco(trocoCalculado);
     }
 
     public int getTempoEmMinutos() {

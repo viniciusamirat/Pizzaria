@@ -239,7 +239,7 @@ public class Informacoes extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVoltarActionPerformed
 
     private void btnAvancarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAvancarActionPerformed
-        
+
         controller.navegarParaResumo();
         
     }//GEN-LAST:event_btnAvancarActionPerformed

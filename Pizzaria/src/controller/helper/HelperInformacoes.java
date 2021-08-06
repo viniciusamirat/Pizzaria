@@ -5,6 +5,9 @@
  */
 package controller.helper;
 
+import model.Cliente;
+import model.Pagamento;
+import model.enuns.FormaDePagamento;
 import view.Informacoes;
 
 /**
@@ -47,6 +50,47 @@ public class HelperInformacoes {
         
         view.getLblTrocoQuanto().setVisible(true);
         view.getTxtTroco().setVisible(true);
+    }
+
+    public Pagamento obterPagamento() {
+        
+        Pagamento pagamento = new Pagamento();
+        
+        if (view.getRadioCredito().isSelected()){
+            
+            pagamento.setFormaDePagamento(FormaDePagamento.CREDITO);
+            pagamento.setPrecisaDeTroco(false);
+            
+        } else if (view.getRadioDebito().isSelected()) {
+            
+            pagamento.setFormaDePagamento(FormaDePagamento.DEBITO);
+            pagamento.setPrecisaDeTroco(false);
+        } else {
+            
+            pagamento.setFormaDePagamento(FormaDePagamento.DINHEIRO);
+            
+            if (view.getRadioSim().isSelected()){
+                pagamento.setPrecisaDeTroco(true);
+                pagamento.setTrocoPraQuanto(Float.parseFloat(view.getTxtTroco().getText()));
+            }
+            
+        }
+        
+        return pagamento;
+    }
+
+    public Cliente obterCliente() {
+        
+        Cliente cliente = new Cliente();
+        
+        cliente.setNome(view.getTxtNome().getText());
+        cliente.setTelefone(view.getTxtTelefone().getText());
+        cliente.setBairro(view.getTxtBairro().getText());
+        cliente.setRua(view.getTxtRua().getText());
+        cliente.setNumeroResidencia(view.getTxtNumero().getText());
+        
+        return cliente;
+        
     }
     
     

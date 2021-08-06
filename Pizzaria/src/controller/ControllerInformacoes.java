@@ -6,6 +6,8 @@
 package controller;
 
 import controller.helper.HelperInformacoes;
+import model.Cliente;
+import model.Pagamento;
 import model.Pedido;
 import view.CardapioPedido;
 import view.Informacoes;
@@ -37,6 +39,18 @@ public class ControllerInformacoes {
     }
 
     public void navegarParaResumo() {
+        
+        Pagamento pagamento = new Pagamento();
+        pagamento = helper.obterPagamento();
+        this.pedido.setPagamento(pagamento);
+        
+        if (pedido.getPagamento().isPrecisaDeTroco()){
+            this.pedido.calcularTroco();
+        }
+        
+        Cliente cliente = new Cliente();
+        cliente = helper.obterCliente();
+        this.pedido.setCliente(cliente);
         
         Resumo resumo = new Resumo();
         resumo.setVisible(true);
