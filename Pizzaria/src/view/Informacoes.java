@@ -42,6 +42,8 @@ public class Informacoes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
         btnVoltar = new javax.swing.JButton();
         lblTitulo1 = new javax.swing.JLabel();
         lblTitulo2 = new javax.swing.JLabel();
@@ -126,20 +128,33 @@ public class Informacoes extends javax.swing.JFrame {
         getContentPane().add(lblPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 190, 200, -1));
 
         radioDebito.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(radioDebito);
         radioDebito.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         radioDebito.setForeground(new java.awt.Color(255, 255, 255));
         radioDebito.setText("Débito");
         radioDebito.setPreferredSize(new java.awt.Dimension(93, 31));
+        radioDebito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioDebitoActionPerformed(evt);
+            }
+        });
         getContentPane().add(radioDebito, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 220, -1, -1));
 
         radioCredito.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(radioCredito);
         radioCredito.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         radioCredito.setForeground(new java.awt.Color(255, 255, 255));
         radioCredito.setText("Crédito");
         radioCredito.setPreferredSize(new java.awt.Dimension(93, 31));
+        radioCredito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioCreditoActionPerformed(evt);
+            }
+        });
         getContentPane().add(radioCredito, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 260, -1, -1));
 
         radioDinheiro.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(radioDinheiro);
         radioDinheiro.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         radioDinheiro.setForeground(new java.awt.Color(255, 255, 255));
         radioDinheiro.setText("Dinheiro");
@@ -156,6 +171,7 @@ public class Informacoes extends javax.swing.JFrame {
         getContentPane().add(lblTroco, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 360, 200, -1));
 
         radioSim.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup2.add(radioSim);
         radioSim.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         radioSim.setForeground(new java.awt.Color(255, 255, 255));
         radioSim.setText("Sim");
@@ -168,10 +184,16 @@ public class Informacoes extends javax.swing.JFrame {
         getContentPane().add(radioSim, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 390, -1, -1));
 
         radioNao.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup2.add(radioNao);
         radioNao.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         radioNao.setForeground(new java.awt.Color(255, 255, 255));
         radioNao.setText("Não");
         radioNao.setPreferredSize(new java.awt.Dimension(93, 31));
+        radioNao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioNaoActionPerformed(evt);
+            }
+        });
         getContentPane().add(radioNao, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 430, -1, -1));
 
         lblTrocoQuanto.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
@@ -211,7 +233,7 @@ public class Informacoes extends javax.swing.JFrame {
 
     private void radioDinheiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioDinheiroActionPerformed
         
-        controller.pagarComDinheiro();
+        controller.pagar();
         
     }//GEN-LAST:event_radioDinheiroActionPerformed
 
@@ -220,6 +242,24 @@ public class Informacoes extends javax.swing.JFrame {
         controller.precisaDeTroco();
         
     }//GEN-LAST:event_radioSimActionPerformed
+
+    private void radioDebitoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioDebitoActionPerformed
+        
+        controller.pagar();
+        
+    }//GEN-LAST:event_radioDebitoActionPerformed
+
+    private void radioCreditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioCreditoActionPerformed
+        
+        controller.pagar();
+        
+    }//GEN-LAST:event_radioCreditoActionPerformed
+
+    private void radioNaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioNaoActionPerformed
+        
+        controller.precisaDeTroco();
+        
+    }//GEN-LAST:event_radioNaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -371,6 +411,8 @@ public class Informacoes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAvancar;
     private javax.swing.JButton btnVoltar;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JLabel lblBairro;
     private javax.swing.JLabel lblFundo;
     private javax.swing.JLabel lblNome;

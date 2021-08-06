@@ -25,8 +25,7 @@ public class HelperInformacoes {
         view.getRadioSim().setVisible(false);
         view.getRadioNao().setVisible(false);
         
-        view.getRadioSim().setSelected(false);
-        view.getRadioNao().setSelected(false);
+        view.getRadioNao().setSelected(true);
     }
 
     public void esconderTrocoParaQuanto() {

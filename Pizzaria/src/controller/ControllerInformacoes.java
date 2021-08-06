@@ -50,7 +50,7 @@ public class ControllerInformacoes {
         helper.esconderTrocoParaQuanto();
     }
 
-    public void pagarComDinheiro() {
+    public void pagar() {
         
         if (informacoes.getRadioDinheiro().isSelected()){
             helper.mostrarPrecisaDeTroco();
