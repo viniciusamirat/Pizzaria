@@ -1,3 +1,3 @@
 # Pizzaria
-Um projeto feito em Java no Netbeans (apenas console), onde é feita a simulação de um atendimento ao cliente.
+Um projeto feito em Java no Netbeans, onde é feita a simulação de um atendimento ao cliente.
 
