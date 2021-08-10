@@ -6,6 +6,7 @@
 package controller;
 
 import controller.helper.HelperResumo;
+import model.Pedido;
 import view.Agradecimento;
 import view.Informacoes;
 import view.Resumo;
@@ -18,6 +19,8 @@ public class ControllerResumo {
     
     private final Resumo resumo;
     private final HelperResumo helper;
+    
+    private Pedido pedido = new Pedido();
 
     public ControllerResumo(Resumo resumo) {
         this.resumo = resumo;
@@ -27,6 +30,7 @@ public class ControllerResumo {
     public void voltarParaInformacoes() {
         
         Informacoes informacoes = new Informacoes();
+        informacoes.setarPedido(this.pedido);
         informacoes.setVisible(true);
         
         this.resumo.setVisible(false);
@@ -38,6 +42,26 @@ public class ControllerResumo {
         agradecimento.setVisible(true);
         
         this.resumo.setVisible(false);
+    }
+
+    public Pedido getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
+    }
+
+    public void existeInformacoes() {
+        
+        if (this.pedido != null){
+            
+            helper.preencherPizzas(this.pedido);
+            helper.preencherInformacoes(this.pedido);
+            helper.preencherPagamento(this.pedido);
+            
+        }
+        
     }
     
     

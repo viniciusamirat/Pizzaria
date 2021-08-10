@@ -6,6 +6,8 @@
 package view;
 
 import controller.ControllerResumo;
+import javax.swing.JLabel;
+import model.Pedido;
 
 /**
  *
@@ -64,11 +66,13 @@ public class Resumo extends javax.swing.JFrame {
         lblTituloPedido.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         lblTituloPedido.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloPedido.setText("Seu pedido");
-        getContentPane().add(lblTituloPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(288, 190, 110, -1));
+        getContentPane().add(lblTituloPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 110, -1));
 
         lblPizzas.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         lblPizzas.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(lblPizzas, new org.netbeans.lib.awtextra.AbsoluteConstraints(288, 220, 270, 340));
+        lblPizzas.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        lblPizzas.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        getContentPane().add(lblPizzas, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 270, 320));
 
         lblTituloInformacoes.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         lblTituloInformacoes.setForeground(new java.awt.Color(255, 255, 255));
@@ -77,7 +81,9 @@ public class Resumo extends javax.swing.JFrame {
 
         lblInformacoes.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         lblInformacoes.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(lblInformacoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(597, 220, 270, 340));
+        lblInformacoes.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        lblInformacoes.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        getContentPane().add(lblInformacoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(597, 240, 270, 320));
 
         lblTituloPagamento.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         lblTituloPagamento.setForeground(new java.awt.Color(255, 255, 255));
@@ -86,7 +92,9 @@ public class Resumo extends javax.swing.JFrame {
 
         lblPagamento.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         lblPagamento.setForeground(new java.awt.Color(255, 255, 255));
-        getContentPane().add(lblPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(918, 220, 270, 240));
+        lblPagamento.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        lblPagamento.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        getContentPane().add(lblPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(918, 240, 320, 220));
 
         btnAvancar.setBackground(new java.awt.Color(255, 255, 255));
         btnAvancar.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
@@ -155,6 +163,31 @@ public class Resumo extends javax.swing.JFrame {
         });
     }
 
+    public JLabel getLblInformacoes() {
+        return lblInformacoes;
+    }
+
+    public void setLblInformacoes(JLabel lblInformacoes) {
+        this.lblInformacoes = lblInformacoes;
+    }
+
+    public JLabel getLblPagamento() {
+        return lblPagamento;
+    }
+
+    public void setLblPagamento(JLabel lblPagamento) {
+        this.lblPagamento = lblPagamento;
+    }
+
+    public JLabel getLblPizzas() {
+        return lblPizzas;
+    }
+
+    public void setLblPizzas(JLabel lblPizzas) {
+        this.lblPizzas = lblPizzas;
+    }
+
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAvancar;
     private javax.swing.JButton btnVoltar;
@@ -167,4 +200,11 @@ public class Resumo extends javax.swing.JFrame {
     private javax.swing.JLabel lblTituloPagamento;
     private javax.swing.JLabel lblTituloPedido;
     // End of variables declaration//GEN-END:variables
+
+    public void setarPedido(Pedido pedido) {
+        
+        controller.setPedido(pedido);
+        
+        controller.existeInformacoes();
+    }
 }

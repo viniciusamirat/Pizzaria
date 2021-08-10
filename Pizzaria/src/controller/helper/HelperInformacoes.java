@@ -7,6 +7,7 @@ package controller.helper;
 
 import model.Cliente;
 import model.Pagamento;
+import model.Pedido;
 import model.enuns.FormaDePagamento;
 import view.Informacoes;
 
@@ -90,6 +91,42 @@ public class HelperInformacoes {
         cliente.setNumeroResidencia(view.getTxtNumero().getText());
         
         return cliente;
+        
+    }
+
+    public void preencherCliente(Pedido pedido) {
+        
+        view.getTxtNome().setText(pedido.getCliente().getNome());
+        view.getTxtTelefone().setText(pedido.getCliente().getTelefone());
+        view.getTxtBairro().setText(pedido.getCliente().getBairro());
+        view.getTxtRua().setText(pedido.getCliente().getRua());
+        view.getTxtNumero().setText(pedido.getCliente().getNumeroResidencia());
+        
+    }
+
+    public void preencherPagamento(Pedido pedido) {
+        
+        switch (pedido.getPagamento().getFormaDePagamento().getVALOR()) {
+            case 1:
+                view.getRadioDebito().setSelected(true);
+                break;
+            case 2:
+                view.getRadioCredito().setSelected(true);
+                break;
+            case 3:
+                view.getRadioDinheiro().setSelected(true);
+                
+                if (pedido.getPagamento().isPrecisaDeTroco()){
+                    
+                    view.getRadioSim().setSelected(true);
+                    view.getTxtTroco().setText(pedido.getPagamento().getTrocoPraQuanto() + "");
+                    
+                    mostrarPrecisaDeTroco();
+                    mostrarTrocoParaQuanto();
+                    
+                }
+                break;
+        }
         
     }
     

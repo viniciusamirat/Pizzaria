@@ -27,6 +27,7 @@ public class ControllerInformacoes {
         this.informacoes = informacoes;
         this.helper = new HelperInformacoes(informacoes);
         
+        this.pedido.setTroco(0);
     }
 
     public void voltarParaCardapioPedido() {
@@ -53,6 +54,7 @@ public class ControllerInformacoes {
         this.pedido.setCliente(cliente);
         
         Resumo resumo = new Resumo();
+        resumo.setarPedido(this.pedido);
         resumo.setVisible(true);
         
         this.informacoes.setVisible(false);
@@ -89,6 +91,17 @@ public class ControllerInformacoes {
 
     public void setPedido(Pedido pedido) {
         this.pedido = pedido;
+    }
+
+    public void existeInformacoes() {
+        
+        if ((this.pedido.getCliente() != null) && (this.pedido.getPagamento() != null)){
+            
+            helper.preencherCliente(this.pedido);
+            helper.preencherPagamento(this.pedido);
+            
+        }
+        
     }
     
     

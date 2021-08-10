@@ -31,6 +31,8 @@ public class Informacoes extends javax.swing.JFrame {
     
     public void setarPedido(Pedido pedido){
         controller.setPedido(pedido);
+        
+        controller.existeInformacoes();
     }
 
     /**
