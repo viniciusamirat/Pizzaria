@@ -14,7 +14,7 @@ import model.enuns.FormaDePagamento;
 public class Pagamento {
     private FormaDePagamento formaDePagamento;
     private boolean precisaDeTroco;
-    private float trocoPraQuanto;
+    private double trocoPraQuanto;
 
     public FormaDePagamento getFormaDePagamento() {
         return formaDePagamento;
@@ -32,11 +32,11 @@ public class Pagamento {
         this.precisaDeTroco = precisaDeTroco;
     }
 
-    public float getTrocoPraQuanto() {
+    public double getTrocoPraQuanto() {
         return trocoPraQuanto;
     }
 
-    public void setTrocoPraQuanto(float trocoPraQuanto) {
+    public void setTrocoPraQuanto(double trocoPraQuanto) {
         this.trocoPraQuanto = trocoPraQuanto;
     }
     

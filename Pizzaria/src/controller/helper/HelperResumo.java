@@ -5,6 +5,7 @@
  */
 package controller.helper;
 
+import static controller.helper.FormatarPreco.formatarParaReais;
 import model.Pedido;
 import view.Resumo;
 
@@ -43,10 +44,12 @@ public class HelperResumo {
         String informacoes = "<html>";
         
         informacoes += "Nome: " + pedido.getCliente().getNome() + "<br>";
-        informacoes += "Telefone: " + pedido.getCliente().getTelefone() + "<br>";
+        informacoes += "Telefone: " + pedido.getCliente().getTelefone()
+                + "<br>";
         informacoes += "Bairro: " + pedido.getCliente().getBairro() + "<br>";
         informacoes += "Rua: " + pedido.getCliente().getRua() + "<br>";
-        informacoes += "Número: " + pedido.getCliente().getNumeroResidencia() + "<br>";
+        informacoes += "Número: " + pedido.getCliente().getNumeroResidencia()
+                + "<br>";
         
         informacoes += "</html>";
         
@@ -76,10 +79,13 @@ public class HelperResumo {
             pagamento += "Precisa de troco: Não<br>";
         }
         
-        pagamento += "Troco pra quanto: " + pedido.getPagamento().getTrocoPraQuanto() + "<br><br>";
+        pagamento += "Troco pra quanto: "
+                + formatarParaReais(pedido.getPagamento().getTrocoPraQuanto())
+                + "<br><br>";
         
-        pagamento += "Total a pagar: " + pedido.getPreco() + "<br>";
-        pagamento += "total de troco: " + pedido.getTroco();
+        pagamento += "Total a pagar: " + formatarParaReais(pedido.getPreco())
+                + "<br>";
+        pagamento += "total de troco: " + formatarParaReais(pedido.getTroco());
         
         pagamento += "</html>";
         

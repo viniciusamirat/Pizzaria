@@ -5,6 +5,7 @@
  */
 package controller.helper;
 
+import static controller.helper.FormatarPreco.formatarParaDouble;
 import model.Cliente;
 import model.Pagamento;
 import model.Pedido;
@@ -72,7 +73,7 @@ public class HelperInformacoes {
             
             if (view.getRadioSim().isSelected()){
                 pagamento.setPrecisaDeTroco(true);
-                pagamento.setTrocoPraQuanto(Float.parseFloat(view.getTxtTroco().getText()));
+                pagamento.setTrocoPraQuanto(formatarParaDouble(view.getTxtTroco().getText()));
             }
             
         }

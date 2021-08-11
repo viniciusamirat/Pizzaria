@@ -239,6 +239,7 @@ public class CardapioPedido extends javax.swing.JFrame {
         txtTotal.setEditable(false);
         txtTotal.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         txtTotal.setForeground(new java.awt.Color(0, 153, 0));
+        txtTotal.setText("R$ 0,00");
         txtTotal.setPreferredSize(new java.awt.Dimension(118, 41));
         getContentPane().add(txtTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 510, 190, 40));
 

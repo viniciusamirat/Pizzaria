@@ -13,13 +13,13 @@ public class Pedido {
     private Cliente cliente;
     private String[] pizzas = new String[9];
     private Pagamento pagamento;
-    private float preco;
-    private float troco;
+    private double preco;
+    private double troco;
     private int tempoEmMinutos = 0;
     
     public void calcularTroco(){
         
-        float trocoCalculado = pagamento.getTrocoPraQuanto() - this.preco;
+        double trocoCalculado = pagamento.getTrocoPraQuanto() - this.preco;
         setTroco(trocoCalculado);
     }
     
@@ -74,19 +74,19 @@ public class Pedido {
         this.cliente = cliente;
     }
 
-    public float getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(float preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 
-    public float getTroco() {
+    public double getTroco() {
         return troco;
     }
 
-    public void setTroco(float troco) {
+    public void setTroco(double troco) {
         this.troco = troco;
     }
 

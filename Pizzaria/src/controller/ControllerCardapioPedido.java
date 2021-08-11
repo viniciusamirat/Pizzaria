@@ -34,8 +34,7 @@ public class ControllerCardapioPedido {
 
     public void navegarParaInformacoes() {
         
-        this.pedido.setPreco(Float.parseFloat(helper.obterPreco()));
-        
+        this.pedido.setPreco(helper.obterPreco());
         this.pedido.calcularTempo();
         
         Informacoes informacoes = new Informacoes();

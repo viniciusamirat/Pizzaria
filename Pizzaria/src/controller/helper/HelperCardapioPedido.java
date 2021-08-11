@@ -5,6 +5,8 @@
  */
 package controller.helper;
 
+import static controller.helper.FormatarPreco.formatarParaReais;
+import static controller.helper.FormatarPreco.formatarReaisParaDouble;
 import model.Pedido;
 import view.CardapioPedido;
 
@@ -12,7 +14,7 @@ import view.CardapioPedido;
  *
  * @author Casa
  */
-public class HelperCardapioPedido {
+public class HelperCardapioPedido{
     
     private final CardapioPedido view;
 
@@ -22,30 +24,27 @@ public class HelperCardapioPedido {
 
     public void somarCampoTotal(double preco) {
         
-        double precoDoCampo = 0.0;
+        double precoDoCampoDouble = formatarReaisParaDouble(view.getTxtTotal().getText());
         
-        if (!view.getTxtTotal().getText().equals("")){
-            precoDoCampo = Double.parseDouble(view.getTxtTotal().getText());
-        }
+        double precoSomado = precoDoCampoDouble + preco;
         
-        double precoSomado = precoDoCampo + preco;
+        String precoSomadoEFormatado = formatarParaReais(precoSomado);
         
-        view.getTxtTotal().setText(precoSomado + "");
+        view.getTxtTotal().setText(precoSomadoEFormatado);
     }
 
     public void subtrairCampoTotal(double preco) {
-        double precoDoCampo = Double.parseDouble(view.getTxtTotal().getText());
         
-        double precoSubtraido = precoDoCampo - preco;
+        double precoDoCampoDouble = formatarReaisParaDouble(view.getTxtTotal().getText());
         
-        view.getTxtTotal().setText(precoSubtraido + "");
+        double precoSubtraido = precoDoCampoDouble - preco;
+        
+        String precoSubtraidoEFormatado = formatarParaReais(precoSubtraido);
+        
+        view.getTxtTotal().setText(precoSubtraidoEFormatado);
     }
 
     public void preencherPizzasSelecionadas(Pedido pedido) {
-        
-        //for (String pizza : pizzas){
-            
-        //}
         
         String pizzas[] = pedido.getPizzas();
         
@@ -89,9 +88,9 @@ public class HelperCardapioPedido {
         view.getTxtTotal().setText(String.valueOf(pedido.getPreco()));
     }
 
-    public String obterPreco() {
+    public double obterPreco() {
         
-        return view.getTxtTotal().getText();
+        return formatarReaisParaDouble(view.getTxtTotal().getText());
         
     }
     
