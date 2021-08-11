@@ -47,6 +47,8 @@ public class ControllerInformacoes {
         
         if (pedido.getPagamento().isPrecisaDeTroco()){
             this.pedido.calcularTroco();
+        } else {
+            this.pedido.zerarTroco();
         }
         
         Cliente cliente = new Cliente();

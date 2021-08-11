@@ -27,6 +27,8 @@ public class Informacoes extends javax.swing.JFrame {
         this.controller = new ControllerInformacoes(this);
         
         controller.esconderCamposTroco();
+        
+        this.txtNome.requestFocus();
     }
     
     public void setarPedido(Pedido pedido){

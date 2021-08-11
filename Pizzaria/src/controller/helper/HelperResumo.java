@@ -58,8 +58,24 @@ public class HelperResumo {
         
         String pagamento = "<html>";
         
-        pagamento += "Forma de pagamento: " + pedido.getPagamento().getFormaDePagamento() + "<br>";
-        pagamento += "Precisa de troco: " + pedido.getPagamento().isPrecisaDeTroco() + "<br>";
+        switch (pedido.getPagamento().getFormaDePagamento().getVALOR()) {
+            case 1:
+                pagamento += "Forma de pagamento: Débito<br>";
+                break;
+            case 2:
+                pagamento += "Forma de pagamento: Crédito<br>";
+                break;
+            case 3:
+                pagamento += "Forma de pagamento: Dinheiro<br>";
+                break;
+        }
+        
+        if (pedido.getPagamento().isPrecisaDeTroco()){
+            pagamento += "Precisa de troco: Sim<br>";
+        } else {
+            pagamento += "Precisa de troco: Não<br>";
+        }
+        
         pagamento += "Troco pra quanto: " + pedido.getPagamento().getTrocoPraQuanto() + "<br><br>";
         
         pagamento += "Total a pagar: " + pedido.getPreco() + "<br>";

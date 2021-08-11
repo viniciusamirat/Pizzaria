@@ -22,6 +22,12 @@ public class Pedido {
         float trocoCalculado = pagamento.getTrocoPraQuanto() - this.preco;
         setTroco(trocoCalculado);
     }
+    
+    public void zerarTroco() {
+        
+        setTroco(0f);
+        
+    }
 
     public int getTempoEmMinutos() {
         return tempoEmMinutos;
@@ -71,6 +77,8 @@ public class Pedido {
     public void setTroco(float troco) {
         this.troco = troco;
     }
+
+    
     
     
 }
