@@ -87,8 +87,8 @@ public class Resumo extends javax.swing.JFrame {
 
         lblTituloPagamento.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         lblTituloPagamento.setForeground(new java.awt.Color(255, 255, 255));
-        lblTituloPagamento.setText("Forma de pagamento");
-        getContentPane().add(lblTituloPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(918, 190, 200, -1));
+        lblTituloPagamento.setText("Pagamento");
+        getContentPane().add(lblTituloPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 190, 110, -1));
 
         lblPagamento.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         lblPagamento.setForeground(new java.awt.Color(255, 255, 255));
