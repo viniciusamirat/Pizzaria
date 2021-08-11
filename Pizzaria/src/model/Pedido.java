@@ -15,7 +15,7 @@ public class Pedido {
     private Pagamento pagamento;
     private float preco;
     private float troco;
-    private int tempoEmMinutos;
+    private int tempoEmMinutos = 0;
     
     public void calcularTroco(){
         
@@ -26,6 +26,18 @@ public class Pedido {
     public void zerarTroco() {
         
         setTroco(0f);
+        
+    }
+    
+    public void calcularTempo(){
+        
+        for (String pizza : this.pizzas){
+            
+            if (pizza != null){
+                this.tempoEmMinutos += 30;
+            }
+            
+        }
         
     }
 

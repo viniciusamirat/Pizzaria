@@ -6,6 +6,8 @@
 package view;
 
 import controller.ControllerAgradecimento;
+import javax.swing.JLabel;
+import model.Pedido;
 
 /**
  *
@@ -34,7 +36,7 @@ public class Agradecimento extends javax.swing.JFrame {
 
         lblTitulo = new javax.swing.JLabel();
         lblTitulo1 = new javax.swing.JLabel();
-        lblTitulo2 = new javax.swing.JLabel();
+        lblTituloTempo = new javax.swing.JLabel();
         lblTitulo3 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -53,10 +55,10 @@ public class Agradecimento extends javax.swing.JFrame {
         lblTitulo1.setText("O pedido será entregue");
         getContentPane().add(lblTitulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(521, 200, 320, -1));
 
-        lblTitulo2.setFont(new java.awt.Font("Monotype Corsiva", 1, 36)); // NOI18N
-        lblTitulo2.setForeground(new java.awt.Color(255, 255, 255));
-        lblTitulo2.setText("em xx minutos");
-        getContentPane().add(lblTitulo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(577, 260, 200, -1));
+        lblTituloTempo.setFont(new java.awt.Font("Monotype Corsiva", 1, 36)); // NOI18N
+        lblTituloTempo.setForeground(new java.awt.Color(255, 255, 255));
+        lblTituloTempo.setText("em xx minutos");
+        getContentPane().add(lblTituloTempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(577, 260, 200, -1));
 
         lblTitulo3.setFont(new java.awt.Font("Monotype Corsiva", 1, 48)); // NOI18N
         lblTitulo3.setForeground(new java.awt.Color(255, 255, 255));
@@ -146,13 +148,28 @@ public class Agradecimento extends javax.swing.JFrame {
         });
     }
 
+    public JLabel getLblTituloTempo() {
+        return lblTituloTempo;
+    }
+
+    public void setLblTituloTempo(JLabel lblTituloTempo) {
+        this.lblTituloTempo = lblTituloTempo;
+    }
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel lblFundo;
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblTitulo1;
-    private javax.swing.JLabel lblTitulo2;
     private javax.swing.JLabel lblTitulo3;
+    private javax.swing.JLabel lblTituloTempo;
     // End of variables declaration//GEN-END:variables
+
+    public void setarPedido(Pedido pedido) {
+        
+        controller.setPedido(pedido);
+        
+    }
 }

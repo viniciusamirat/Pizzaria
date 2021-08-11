@@ -39,17 +39,10 @@ public class ControllerResumo {
     public void confirmarPedido() {
         
         Agradecimento agradecimento = new Agradecimento();
+        agradecimento.setarPedido(this.pedido);
         agradecimento.setVisible(true);
         
         this.resumo.setVisible(false);
-    }
-
-    public Pedido getPedido() {
-        return pedido;
-    }
-
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
     }
 
     public void existeInformacoes() {
@@ -64,5 +57,11 @@ public class ControllerResumo {
         
     }
     
-    
+    public Pedido getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
+    }
 }

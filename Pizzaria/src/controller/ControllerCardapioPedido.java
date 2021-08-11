@@ -36,6 +36,8 @@ public class ControllerCardapioPedido {
         
         this.pedido.setPreco(Float.parseFloat(helper.obterPreco()));
         
+        this.pedido.calcularTempo();
+        
         Informacoes informacoes = new Informacoes();
         informacoes.setarPedido(pedido);
         informacoes.setVisible(true);
