@@ -9,7 +9,7 @@ package model;
  *
  * @author Casa
  */
-public class Pedido {
+public class Pedido implements InterfacePedido{
     private Cliente cliente;
     private String[] pizzas = new String[9];
     private Pagamento pagamento;
@@ -17,18 +17,21 @@ public class Pedido {
     private double troco;
     private int tempoEmMinutos = 0;
     
+    @Override
     public void calcularTroco(){
         
         double trocoCalculado = pagamento.getTrocoPraQuanto() - this.preco;
         setTroco(trocoCalculado);
     }
     
+    @Override
     public void zerarTroco() {
         
         setTroco(0f);
         
     }
     
+    @Override
     public void calcularTempo(){
         
         for (String pizza : this.pizzas){
