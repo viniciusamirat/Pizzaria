@@ -63,10 +63,10 @@ public class Resumo extends javax.swing.JFrame {
         lblTitulo.setText("Resumo");
         getContentPane().add(lblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(605, 90, 150, -1));
 
-        lblTituloPedido.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
+        lblTituloPedido.setFont(new java.awt.Font("Monotype Corsiva", 1, 36)); // NOI18N
         lblTituloPedido.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloPedido.setText("Seu pedido");
-        getContentPane().add(lblTituloPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 110, -1));
+        getContentPane().add(lblTituloPedido, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 160, -1));
 
         lblPizzas.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         lblPizzas.setForeground(new java.awt.Color(255, 255, 255));
@@ -74,21 +74,21 @@ public class Resumo extends javax.swing.JFrame {
         lblPizzas.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         getContentPane().add(lblPizzas, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 240, 270, 320));
 
-        lblTituloInformacoes.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
+        lblTituloInformacoes.setFont(new java.awt.Font("Monotype Corsiva", 1, 36)); // NOI18N
         lblTituloInformacoes.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloInformacoes.setText("Suas informações");
-        getContentPane().add(lblTituloInformacoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(597, 190, 170, -1));
+        getContentPane().add(lblTituloInformacoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 190, 240, -1));
 
         lblInformacoes.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         lblInformacoes.setForeground(new java.awt.Color(255, 255, 255));
         lblInformacoes.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         lblInformacoes.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        getContentPane().add(lblInformacoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(597, 240, 270, 320));
+        getContentPane().add(lblInformacoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 250, 270, 320));
 
-        lblTituloPagamento.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
+        lblTituloPagamento.setFont(new java.awt.Font("Monotype Corsiva", 1, 36)); // NOI18N
         lblTituloPagamento.setForeground(new java.awt.Color(255, 255, 255));
         lblTituloPagamento.setText("Pagamento");
-        getContentPane().add(lblTituloPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 190, 110, -1));
+        getContentPane().add(lblTituloPagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 190, 160, -1));
 
         lblPagamento.setFont(new java.awt.Font("Monotype Corsiva", 1, 24)); // NOI18N
         lblPagamento.setForeground(new java.awt.Color(255, 255, 255));
