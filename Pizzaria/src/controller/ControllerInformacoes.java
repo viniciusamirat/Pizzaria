@@ -87,14 +87,6 @@ public class ControllerInformacoes {
         }
     }
 
-    public Pedido getPedido() {
-        return pedido;
-    }
-
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
-    }
-
     public void existeInformacoes() {
         
         if ((this.pedido.getCliente() != null) && (this.pedido.getPagamento() != null)){
@@ -106,5 +98,12 @@ public class ControllerInformacoes {
         
     }
     
+    public Pedido getPedido() {
+        return pedido;
+    }
+
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
+    }
     
 }

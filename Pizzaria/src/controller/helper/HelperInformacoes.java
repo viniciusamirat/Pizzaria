@@ -117,12 +117,13 @@ public class HelperInformacoes {
             case 3:
                 view.getRadioDinheiro().setSelected(true);
                 
+                mostrarPrecisaDeTroco();
+                
                 if (pedido.getPagamento().isPrecisaDeTroco()){
                     
                     view.getRadioSim().setSelected(true);
                     view.getTxtTroco().setText(pedido.getPagamento().getTrocoPraQuanto() + "");
                     
-                    mostrarPrecisaDeTroco();
                     mostrarTrocoParaQuanto();
                     
                 }
